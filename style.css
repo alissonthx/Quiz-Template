@@ -8,6 +8,25 @@ body {
   min-height: 100vh;
 }
 
+h1 {
+  font-family: sans-serif;
+  padding-left: 20px;
+  color: #222;
+  font-weight: 300;
+}
+
+a {
+  display: block;
+  bottom: 2rem;
+  right: 2rem;
+  position: absolute;
+  background-color: #fb5f70;
+  border-radius: 5px;
+  padding: 20px;
+  width: 28px;
+  height: 28px;
+  cursor: pointer;
+}
 h2 {
   text-align: center;
 }
@@ -65,7 +84,7 @@ button:hover {
 
 .ui-container {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-self: center;
   padding: 40px;
 }

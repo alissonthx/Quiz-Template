@@ -92,3 +92,28 @@ submitBtn.addEventListener('click', () => {
     }
   }
 })
+
+// Play/pause Music
+
+// Grab ID of audio player
+const Audio = document.getElementById('audio');
+
+// Grab ID of play button
+const playBtn = document.getElementById('play');
+
+// Grab ID of pause button
+const pauseBtn = document.getElementById('pause');
+
+// Play audio & show pause btn
+const playShow = function() {
+  Audio.play();
+  playBtn.style.display = "none";
+  pauseBtn.style.display = "inline-block";
+};
+
+// Pause audio & show play btn
+const pauseShow = function() {
+  Audio.pause();
+  playBtn.style.display = "inline-block";
+  pauseBtn.style.display = "none";
+};
