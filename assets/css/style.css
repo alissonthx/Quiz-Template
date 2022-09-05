@@ -139,7 +139,7 @@ button:hover {
   align-self: center;
 }
 
-.player{
+.player {
   display: flex;
 }
 
@@ -160,7 +160,7 @@ button:hover {
   height: 30px;
 }
 
-.icon{
+.icon {
   position: absolute;
   bottom: 2.5rem;
   right: 3.5rem;
@@ -169,6 +169,7 @@ button:hover {
 @media screen and (max-width: 1000px) {
 
   a {
+    padding: 40px;
     bottom: 8rem;
     left: 4rem;
   }
