@@ -17,8 +17,8 @@ h1 {
 
 a {
   display: block;
-  bottom: 2rem;
-  right: 2rem;
+  bottom: 3rem;
+  right: 3rem;
   position: absolute;
   background-color: #fb5f70;
   border-radius: 5px;
@@ -138,7 +138,7 @@ button:hover {
   align-items: center;
   padding: 10px 20px;
   border-radius: 6px;
-  background-color: #9b59b6;
+  background-color: #fb5f70;
   color: white;
   font-size: 1.5rem;
 }
