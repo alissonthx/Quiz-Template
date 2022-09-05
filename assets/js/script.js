@@ -50,8 +50,13 @@ let coins = 0;
 
 loadQuiz();
 
-function loadScreen(){
-  alert("Carregando tela");
+// Function to Loadscreen
+// function loadScreen(){
+//   alert("Carregando tela");
+// }
+
+function character(){
+  
 }
 
 function loadQuiz() {
@@ -70,7 +75,7 @@ function getSelected() {
 
   answerEls.forEach((answerEl) => {
     if (answerEl.checked) {
-
+      character();
       answer = answerEl.id;
     }
   });
