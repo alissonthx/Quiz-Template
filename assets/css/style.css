@@ -169,8 +169,8 @@ button:hover {
 @media screen and (max-width: 1000px) {
 
   a {
-    right: 5rem;
     bottom: 8rem;
+    left: 4rem;
   }
 
   ul li {
@@ -198,7 +198,8 @@ button:hover {
   }
 
   .icon {
-    display: none;
+    bottom: 8rem;
+    right: 4rem;
   }
 
   .text,
