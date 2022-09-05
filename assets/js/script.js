@@ -36,6 +36,7 @@ const quizData = [
 const quiz = document.getElementById("quiz");
 const answerEls = document.querySelectorAll(".answer");
 const questionEl = document.getElementById("question");
+const character = document.getElementById("character");
 const a_text = document.getElementById("a_text");
 const b_text = document.getElementById("b_text");
 const c_text = document.getElementById("c_text");
@@ -69,6 +70,7 @@ function getSelected() {
 
   answerEls.forEach((answerEl) => {
     if (answerEl.checked) {
+
       answer = answerEl.id;
     }
   });
@@ -95,12 +97,9 @@ submitBtn.addEventListener("click", () => {
       score++;
 
       // insert 10 coins per correct answer
-      coins += 10;      
-      // alert(quizData[4].msgCorrect);
+      coins += 10;            
       document.getElementById("coinsResult").innerHTML = + coins;
       coinSound();
-    }else if( answer !== quizData[currentQuiz].correct){
-      // alert(quizData[4].msgIncorrect);
     }
 
     currentQuiz++;
