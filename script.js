@@ -30,7 +30,7 @@ const quizData = [
     c: "Ritha",
     d: "Armor Giant",
     correct: "c",
-  },
+  }  
 ];
 
 const quiz = document.getElementById("quiz");
@@ -48,6 +48,10 @@ let score = 0;
 let coins = 0;
 
 loadQuiz();
+
+function loadScreen(){
+  alert("Carregando tela");
+}
 
 function loadQuiz() {
   deselectAnswers();
@@ -91,9 +95,12 @@ submitBtn.addEventListener("click", () => {
       score++;
 
       // insert 10 coins per correct answer
-      coins += 10;
+      coins += 10;      
+      // alert(quizData[4].msgCorrect);
       document.getElementById("coinsResult").innerHTML = + coins;
       coinSound();
+    }else if( answer !== quizData[currentQuiz].correct){
+      // alert(quizData[4].msgIncorrect);
     }
 
     currentQuiz++;
