@@ -30,13 +30,12 @@ const quizData = [
     c: "Ritha",
     d: "Armor Giant",
     correct: "c",
-  }  
+  },
 ];
 
 const quiz = document.getElementById("quiz");
 const answerEls = document.querySelectorAll(".answer");
 const questionEl = document.getElementById("question");
-const character = document.getElementById("character");
 const a_text = document.getElementById("a_text");
 const b_text = document.getElementById("b_text");
 const c_text = document.getElementById("c_text");
@@ -55,10 +54,6 @@ loadQuiz();
 //   alert("Carregando tela");
 // }
 
-function character(){
-  
-}
-
 function loadQuiz() {
   deselectAnswers();
   const currentQuizData = quizData[currentQuiz];
@@ -75,8 +70,7 @@ function getSelected() {
 
   answerEls.forEach((answerEl) => {
     if (answerEl.checked) {
-      character();
-      answer = answerEl.id;
+      answer = answerEl.id;           
     }
   });
   return answer;
@@ -84,13 +78,20 @@ function getSelected() {
 
 function deselectAnswers() {
   answerEls.forEach((answerEl) => {
-    answerEl.checked = false;
+    answerEl.checked = false;    
   });
 }
 
-function coinSound(){  
+function coinSound() {
   sound.play();
 }
+
+// inputA.addEventListener("click", () => {  
+//   characterA.style.removeProperty("display");
+//   characterB.style.display = "";
+//   characterC.style.display = "";
+//   characterD.style.display = "";
+// });
 
 submitBtn.addEventListener("click", () => {
   // check to see the answer
@@ -102,8 +103,8 @@ submitBtn.addEventListener("click", () => {
       score++;
 
       // insert 10 coins per correct answer
-      coins += 10;            
-      document.getElementById("coinsResult").innerHTML = + coins;
+      coins += 10;
+      document.getElementById("coinsResult").innerHTML = +coins;
       coinSound();
     }
 
