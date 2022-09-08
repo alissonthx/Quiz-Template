@@ -33,6 +33,15 @@ body {
   width: 250px;
 }
 
+.loader-container{
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  min-height: 100vh; 
+  min-width: 100vw;  
+}
+
 .hidden {
   display: none;
 }
