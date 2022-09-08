@@ -19,17 +19,14 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 }
 
-a {
-  text-decoration: none;
-  border: none;
+h1 {  
   text-shadow: 1px 1px 2px #120458;
   color: white;
-  background-color: var(--clr);
-  padding: 15px 50px;
-  border-radius: 10px;
-  font-size: 1.6rem;
+  background-color: var(--clr);  
+  font-size: 2rem;
   transition: all 0.2s ease;
   animation: screen infinite;
   animation-duration: 2s; 
