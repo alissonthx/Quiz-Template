@@ -10,12 +10,10 @@ function quizPage() {
   let loader = document.getElementById("loader");
 
   loading.classList.add("hidden");
-  setTimeout(() => {
-    loader.classList.remove("hidden");
-    loading.style.display = "none";
-  }, 1200);
+  loader.classList.remove("hidden");
+  loading.style.display = "none";
 
   setTimeout(() => {
     window.location.href = "quiz.html";
-  }, 2000);
+  }, 2200);
 }
