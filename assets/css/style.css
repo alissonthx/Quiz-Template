@@ -178,7 +178,7 @@ button:hover {
   display: none;
 }
 
-#container{  
+#container {
   position: absolute;
   z-index: 1;
   width: 100vw;
@@ -253,48 +253,24 @@ button:hover {
   }
 }
 
-.quiz-animation{
+.quiz-animation {
   animation: quiz-animation 1s;
 }
 
 @keyframes quiz-animation {
   0% {
     background-color: #222;
-    clip-path: polygon(0% 0%, 0% 100%, 90% 100%, 0% 0%, 100% 90%, 100% 0%);
+    clip-path: polygon(0% 0%, 0% 100%, 0% 100%, 0% 0%, 100% 0%, 100% 0%);
+  }
+
+  50% {
+    background-color: #222;
+    clip-path: polygon(0% 0%, 0% 100%, 100% 100%, 0% 0%, 100% 100%, 100% 0%);
   }
 
   100% {
-    background-color: #222;
-    clip-path: polygon(0% 0%, 0% 100%, 90% 100%, 0% 0%, 100% 90%, 100% 0%);
-  }  
+    background-color: #222;    
+    display: none;
+    clip-path: polygon(0% 0%, 0% 100%, 0% 100%, 0% 0%, 100% 0%, 100% 0%);
+  }
 }
-
-/* .quiz-animation-down {
-  animation: quiz-animation-down 1s;
-} */
-
-/* @keyframes quiz-animation-up {
-  0% {
-    background-color: #222;    
-    clip-path: polygon(0 0, 0 100%, 0 0);
-  }
-
-  100% {
-    background-color: #222;    
-    clip-path: polygon(100% 0, 0 100%, 0 0);
-
-  }
-} */
-
-/* @keyframes quiz-animation-down {
-  0% {
-    background-color: #222;
-    clip-path: polygon(100% 0, 100% 100%, 100% 100%);
-  }
-
-  100% {
-
-    background-color: #222;
-    clip-path: polygon(100% 0, 0 100%, 100% 100%);
-  }
-} */
