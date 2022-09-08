@@ -27,6 +27,7 @@ function loadScreen(){
 }
 
 function loadQuiz(delayToChangeQuestion) {
+  container.style.display = "none";
   deselectAnswers();
   const currentQuizData = quizData[currentQuiz];
 
