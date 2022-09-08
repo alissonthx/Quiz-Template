@@ -1,6 +1,6 @@
 const quizData = [
   {
-    question: "What's the name of the Goat's sin of Lust",
+    question: "Qual nome do personagem cujo pecado é a Luxuria",
     a: "Gowther",
     b: "Rasuto",
     c: "Ban",
@@ -8,7 +8,7 @@ const quizData = [
     correct: "a",
   },
   {
-    question: "What's the name of Ban's partner",
+    question: "Qual nome da companheira de Ban",
     a: "Fairy",
     b: "Rasuto",
     c: "Elaine",
@@ -16,7 +16,7 @@ const quizData = [
     correct: "c",
   },
   {
-    question: "What's the sacred tresure of King in Seven deadly sins ",
+    question: "Qual o tesouro sagrado de King em Nanatsu no Taizai ",
     a: "Chastiefol",
     b: "Grizzly",
     c: "Grizzly Bear",
@@ -24,7 +24,7 @@ const quizData = [
     correct: "a",
   },
   {
-    question: "What's the sacred tresure of Escanor in Seven deadly sins",
+    question: "Qual o tesouro sagrado de Escanor em Nanatsu no Taizai",
     a: "Gowther",
     b: "Rasuto",
     c: "Ritha",
