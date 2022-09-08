@@ -13,7 +13,7 @@ body {
   min-height: 100vh;
 }
 
-.c-loader {
+.c-icon {
   animation: is-rotating 1s infinite;
   border: 6px solid #e5e5e5;
   border-radius: 50%;
@@ -24,7 +24,20 @@ body {
   margin-right: 50px;
 }
 
-.container {
+.c-loader {
+  animation: is-rotating-loading 1s infinite;
+  border: 6px solid #e5e5e5;
+  border-radius: 50%;
+  border-top-color: #51d4db;
+  height: 250px;
+  width: 250px;
+}
+
+.hidden {
+  display: none;
+}
+
+.container {  
   min-height: 100vh;
   display: flex;
   justify-content: center;
@@ -43,6 +56,12 @@ h1 {
 }
 
 @keyframes is-rotating {
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+@keyframes is-rotating-loading {
   to {
     transform: rotate(1turn);
   }
