@@ -13,8 +13,12 @@ let currentQuiz = 0;
 let score = 0;
 let coins = 0;
 
-// loadScreen();
+loading();
 loadQuiz();
+
+function loading(){
+  console.log("teste");
+}
 
 function loadScreen(){
   container.style.display = "block";
