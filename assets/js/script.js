@@ -15,17 +15,17 @@ let coins = 0;
 
 loadQuizWithAnimation();
 
-function loadQuizWithAnimation() {  
+function loadQuizWithAnimation() {
   deselectAnswers();
   const currentQuizData = quizData[currentQuiz];
-
-  container.classList.add("quiz-animation");
 
   questionEl.innerText = currentQuizData.question;
   a_text.innerText = currentQuizData.a;
   b_text.innerText = currentQuizData.b;
   c_text.innerText = currentQuizData.c;
   d_text.innerText = currentQuizData.d;
+
+  container.classList.add("quiz-animation");
 
   setTimeout(() => {
     container.classList.remove("quiz-animation");
@@ -75,14 +75,16 @@ submitBtn.addEventListener("click", () => {
 });
 
 // Animation ==================================================
-answerEls.forEach(el => {
-  el.addEventListener('change', () => {
-      resetAswers();
-      const img = el.parentElement.querySelector('img');
-      img.classList.remove('hidden');
+answerEls.forEach((el) => {
+  el.addEventListener("change", () => {
+    resetAswers();
+    const img = el.parentElement.querySelector("img");
+    img.classList.remove("hidden");
   });
 });
 
 function resetAswers(selector) {
-  document.querySelectorAll('#quiz img').forEach(img => img.classList.add('hidden'));
+  document
+    .querySelectorAll("#quiz img")
+    .forEach((img) => img.classList.add("hidden"));
 }

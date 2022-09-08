@@ -178,6 +178,12 @@ button:hover {
   display: none;
 }
 
+#container{  
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+}
+
 @media screen and (max-width: 1000px) {
 
   a {
@@ -256,7 +262,7 @@ button:hover {
   animation: quiz-animation-down 1s;
 }
 
-@keyframes quiz-animation {
+@keyframes quiz-animation-up {
   0% {
     background-color: #222;
     /* up */
