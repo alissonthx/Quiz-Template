@@ -15,8 +15,7 @@ let coins = 0;
 
 loadQuizWithAnimation();
 
-function loadQuizWithAnimation() {
-  cleanRadios();
+function loadQuizWithAnimation() {  
   deselectAnswers();
   const currentQuizData = quizData[currentQuiz];
 
@@ -45,6 +44,7 @@ function getSelected() {
 }
 
 function deselectAnswers() {
+  resetAswers();
   answerEls.forEach((answerEl) => {
     answerEl.checked = false;
   });
@@ -85,9 +85,4 @@ answerEls.forEach(el => {
 
 function resetAswers(selector) {
   document.querySelectorAll('#quiz img').forEach(img => img.classList.add('hidden'));
-}
-
-function cleanRadios() {
-  resetAswers();
-  answerEls.forEach(el => el.checked = false);
 }
