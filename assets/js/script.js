@@ -30,7 +30,7 @@ function getSelected() {
 
   answerEls.forEach((answerEl) => {
     if (answerEl.checked) {
-      answer = answerEl.id;           
+      answer = answerEl.id;
     }
   });
   return answer;
@@ -38,7 +38,7 @@ function getSelected() {
 
 function deselectAnswers() {
   answerEls.forEach((answerEl) => {
-    answerEl.checked = false;    
+    answerEl.checked = false;
   });
 }
 
@@ -69,12 +69,10 @@ submitBtn.addEventListener("click", () => {
 // Animation ==================================================
 let SelectedInput = null;
 for (let i = 0; i < answerEls.length; i++) {
-
-  answerEls[i].addEventListener('change', function() {
-        if (this !== SelectedInput) {
-          SelectedInput = this;
-        }
-
-        SelectedInput.nextElementSibling.style.display = ""
-    });
+  answerEls[i].addEventListener("change", function () {
+    if (this !== SelectedInput) {
+      SelectedInput = this;      
+    }    
+    SelectedInput.nextElementSibling.nextElementSibling.style.display = "";
+  });
 }

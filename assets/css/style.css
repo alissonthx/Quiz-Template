@@ -166,6 +166,14 @@ button:hover {
   right: 3.5rem;
 }
 
+.character {
+  position: absolute;
+  margin: -1rem 0;
+  width: 45px;
+  height: 45px;
+  right: 36%;
+}
+
 @media screen and (max-width: 1000px) {
 
   a {
@@ -176,7 +184,7 @@ button:hover {
 
   ul li {
     font-size: 3.5rem;
-    margin: 1rem 0;
+    padding: 1.5rem;
   }
 
   button {
@@ -223,5 +231,13 @@ button:hover {
   input {
     width: 2rem;
     height: 2rem;
+  }
+
+  .character {    
+    position: absolute;
+    width: 90px;
+    height: 90px;
+    margin: -1rem 0;
+    right: 15%;
   }
 }
