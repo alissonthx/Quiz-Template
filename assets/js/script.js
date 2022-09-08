@@ -13,7 +13,7 @@ let currentQuiz = 0;
 let score = 0;
 let coins = 0;
 
-loadScreen();
+// loadScreen();
 loadQuiz();
 
 function loadScreen(){
