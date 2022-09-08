@@ -180,6 +180,7 @@ button:hover {
 
 #container{  
   position: absolute;
+  z-index: 1;
   width: 100vw;
   height: 100vh;
 }
@@ -252,32 +253,40 @@ button:hover {
   }
 }
 
-/* input[type="radio"].answer:checked {
-  animation: img infinite;
-
-} */
-
-.quiz-animation {
-  animation: quiz-animation-up 1s;
-  animation: quiz-animation-down 1s;
+.quiz-animation{
+  animation: quiz-animation 1s;
 }
 
-@keyframes quiz-animation-up {
+@keyframes quiz-animation {
   0% {
     background-color: #222;
-    /* up */
-    /* clip-path: polygon(0 0, 0 100%, 0 0); */
+    clip-path: polygon(0% 0%, 0% 100%, 90% 100%, 0% 0%, 100% 90%, 100% 0%);
   }
 
   100% {
     background-color: #222;
-    /* up */
-    /* clip-path: polygon(100% 0, 0 100%, 0 0); */
-
-  }
+    clip-path: polygon(0% 0%, 0% 100%, 90% 100%, 0% 0%, 100% 90%, 100% 0%);
+  }  
 }
 
-@keyframes quiz-animation-down {
+/* .quiz-animation-down {
+  animation: quiz-animation-down 1s;
+} */
+
+/* @keyframes quiz-animation-up {
+  0% {
+    background-color: #222;    
+    clip-path: polygon(0 0, 0 100%, 0 0);
+  }
+
+  100% {
+    background-color: #222;    
+    clip-path: polygon(100% 0, 0 100%, 0 0);
+
+  }
+} */
+
+/* @keyframes quiz-animation-down {
   0% {
     background-color: #222;
     clip-path: polygon(100% 0, 100% 100%, 100% 100%);
@@ -287,15 +296,5 @@ button:hover {
 
     background-color: #222;
     clip-path: polygon(100% 0, 0 100%, 100% 100%);
-  }
-}
-
-/* @keyframes quiz-animation {
-  0% {
-      opacity: 0;
-  }
-
-  100% {
-      opacity: 1;
   }
 } */

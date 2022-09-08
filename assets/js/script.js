@@ -29,7 +29,7 @@ function loadQuizWithAnimation() {
 
   setTimeout(() => {
     container.classList.remove("quiz-animation");
-  }, 500);
+  }, 1000);
 }
 
 function getSelected() {
