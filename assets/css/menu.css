@@ -13,7 +13,7 @@ body {
   min-height: 100vh;
 }
 
-.c-icon {
+/* .c-icon {
   animation: is-rotating 1s infinite;
   border: 6px solid #e5e5e5;
   border-radius: 50%;
@@ -22,7 +22,7 @@ body {
   width: 50px;
   padding-left: 20px;
   margin-right: 50px;
-}
+} */
 
 .c-loader {
   animation: is-rotating-loading 1s infinite;
