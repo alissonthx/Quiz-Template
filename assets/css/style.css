@@ -254,7 +254,7 @@ button:hover {
 }
 
 .quiz-animation {
-  animation: quiz-animation 1s;
+  animation: quiz-animation 1.2s ease-in-out;
 }
 
 @keyframes quiz-animation {

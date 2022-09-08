@@ -13,24 +13,30 @@ let currentQuiz = 0;
 let score = 0;
 let coins = 0;
 
-loadQuizWithAnimation();
+loadScreen();
+loadQuiz();
 
-function loadQuizWithAnimation() {
-  deselectAnswers();
-  const currentQuizData = quizData[currentQuiz];
-
-  questionEl.innerText = currentQuizData.question;
-  a_text.innerText = currentQuizData.a;
-  b_text.innerText = currentQuizData.b;
-  c_text.innerText = currentQuizData.c;
-  d_text.innerText = currentQuizData.d;
-
+function loadScreen(){
+  container.style.display = "block";
   container.classList.add("quiz-animation");
 
   setTimeout(() => {
     container.classList.remove("quiz-animation");
     container.style.display = "none";
-  }, 1000);
+  }, 1200);
+}
+
+function loadQuiz(delayToChangeQuestion) {
+  deselectAnswers();
+  const currentQuizData = quizData[currentQuiz];
+
+  setTimeout(()=>{
+    questionEl.innerText = currentQuizData.question;
+    a_text.innerText = currentQuizData.a;
+    b_text.innerText = currentQuizData.b;
+    c_text.innerText = currentQuizData.c;
+    d_text.innerText = currentQuizData.d;  
+  },delayToChangeQuestion);
 }
 
 function getSelected() {
@@ -68,7 +74,8 @@ submitBtn.addEventListener("click", () => {
 
     currentQuiz++;
     if (currentQuiz < quizData.length) {
-      loadQuizWithAnimation();
+      loadQuiz(500);
+      loadScreen();
     } else {
       quiz.innerHTML = `<h2>You answered correctly at ${score}/${quizData.length} questions.</h2> <button onclick="location.reload()">Try again?</button>`;
     }
