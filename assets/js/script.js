@@ -1,38 +1,3 @@
-const quizData = [
-  {
-    question: "What's the name of the Goat's sin of Lust",
-    a: "Gowther",
-    b: "Rasuto",
-    c: "Ban",
-    d: "Armor Giant",
-    correct: "a",
-  },
-  {
-    question: "What's the name of Ban's partner",
-    a: "Fairy",
-    b: "Rasuto",
-    c: "Elaine",
-    d: "Fox",
-    correct: "c",
-  },
-  {
-    question: "What's the sacred tresure of King in Seven deadly sins ",
-    a: "Chastiefol",
-    b: "Grizzly",
-    c: "Grizzly Bear",
-    d: "King Treasure",
-    correct: "a",
-  },
-  {
-    question: "What's the sacred tresure of Escanor in Seven deadly sins",
-    a: "Gowther",
-    b: "Rasuto",
-    c: "Ritha",
-    d: "Armor Giant",
-    correct: "c",
-  },
-];
-
 const quiz = document.getElementById("quiz");
 const answerEls = document.querySelectorAll(".answer");
 const questionEl = document.getElementById("question");
@@ -48,11 +13,6 @@ let score = 0;
 let coins = 0;
 
 loadQuiz();
-
-// Function to Loadscreen
-// function loadScreen(){
-//   alert("Carregando tela");
-// }
 
 function loadQuiz() {
   deselectAnswers();
@@ -82,17 +42,6 @@ function deselectAnswers() {
   });
 }
 
-function coinSound() {
-  sound.play();
-}
-
-// inputA.addEventListener("click", () => {  
-//   characterA.style.removeProperty("display");
-//   characterB.style.display = "";
-//   characterC.style.display = "";
-//   characterD.style.display = "";
-// });
-
 submitBtn.addEventListener("click", () => {
   // check to see the answer
   const answer = getSelected();
@@ -117,21 +66,15 @@ submitBtn.addEventListener("click", () => {
   }
 });
 
-// Audio
-const Audio = document.getElementById("audio");
-const playBtn = document.getElementById("play");
-const pauseBtn = document.getElementById("pause");
+// Animation ==================================================
+let SelectedInput = null;
+for (let i = 0; i < answerEls.length; i++) {
 
-// Play audio & show pause btn
-const playShow = function () {
-  Audio.play();
-  playBtn.style.display = "none";
-  pauseBtn.style.display = "inline-block";
-};
+  answerEls[i].addEventListener('change', function() {
+        if (this !== SelectedInput) {
+          SelectedInput = this;
+        }
 
-// Pause audio & show play btn
-const pauseShow = function () {
-  Audio.pause();
-  playBtn.style.display = "inline-block";
-  pauseBtn.style.display = "none";
-};
+        SelectedInput.nextElementSibling.style.display = ""
+    });
+}
