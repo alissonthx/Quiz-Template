@@ -29,6 +29,7 @@ function loadQuizWithAnimation() {
 
   setTimeout(() => {
     container.classList.remove("quiz-animation");
+    container.style.display = "none";
   }, 1000);
 }
 
