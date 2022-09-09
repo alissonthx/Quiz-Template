@@ -15,5 +15,5 @@ function quizPage() {
 
   setTimeout(() => {
     window.location.href = "quiz.html";
-  }, 2200);
+  }, 1100);
 }
