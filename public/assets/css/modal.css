@@ -1,5 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Silkscreen&family=VT323&display=swap');
 
+h2{
+    font-size: 2.2rem;
+    font-weight: 300;
+}
+
+p{
+    opacity: 0.7;
+    font-size: 1.3rem;
+    font-weight: 200;
+}
+
+img{
+    padding: 10px;
+}
+
 body {
     margin: 0 auto;
     font-family: 'Silkscreen', cursive;
@@ -25,7 +40,8 @@ body {
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     padding: 30px 50px;
-    width: 600px;
+    width: 350px;    
+    height: 200px;
     max-width: 100%;
     text-align: center;
 }
