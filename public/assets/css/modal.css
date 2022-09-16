@@ -1,7 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Silkscreen&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Silkscreen&family=VT323&display=swap');
 
-.modal-container{
-    background-color: rgba(0,0,0,0.5);
+body {
+    margin: 0 auto;
+    font-family: 'Silkscreen', cursive;
+    min-height: 100vh;
+}
+
+.modal-container {
+    background-color: rgba(0, 0, 0, 0.5);
     opacity: 0;
     display: flex;
     justify-content: center;
@@ -11,20 +17,20 @@
     top: 0;
     left: 0;
     width: 100vw;
-    height: 100vh;    
+    height: 100vh;
 }
 
-.modal{
+.modal {
     background-color: #fff;
     border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     padding: 30px 50px;
     width: 600px;
     max-width: 100%;
     text-align: center;
 }
 
-.show{
+.show {
     pointer-events: auto;
     opacity: 1;
 }
