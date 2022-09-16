@@ -3,17 +3,12 @@
   <head>
     <title>Quiz Template</title>
     <meta charset="utf-8" />
-    <script type="text/javascript" src="./assets/js/data.js" defer></script>
-    <script type="text/javascript" src="./assets/js/quiz.js" defer></script>
-    <script type="text/javascript" src="./assets/js/audio.js" defer></script>
-    <script type="text/javascript" src="./assets/js/modal.js" defer></script>
     <link rel="stylesheet" href="./assets/css/quiz.css" />
     <link rel="stylesheet" href="./assets/css/modal.css" />
   </head>
   <body>
     <div id="container"></div>
     <div>
-
       <!-- Ui Content -->
       <div class="ui-container">
         <!-- Text Element with effect -->
@@ -85,7 +80,35 @@
               </li>
             </ul>
           </div>
-          <button id="submit" type="submit">Submit</button>          
+          <button id="submit" type="submit">Submit</button>
+        </div>
+      </div>
+
+      <!-- Modal incorrect -->
+      <div class="modal-container" id="modal_container_i">
+        <div class="modal">
+          <h2>Incorrect</h2>
+          <p>Incorrect answer</p>
+          <img
+            src="./assets/img/iconIncorrect.png"
+            alt="incorrect icon"
+            srcset=""
+          />
+          <button id="close_i">OK</button>
+        </div>
+      </div>
+
+      <!-- Modal correct -->
+      <div class="modal-container" id="modal_container_c">
+        <div class="modal">
+          <h2>Correct</h2>
+          <p>Correct answer</p>
+          <img
+            src="./assets/img/iconCorrect.png"
+            alt="incorrect icon"
+            srcset=""
+          />
+          <button id="close_c">OK</button>
         </div>
       </div>
 
@@ -137,20 +160,18 @@
           ></lottie-player>
         </div>
 
-        <!-- Modal -->
-        <div class="modal-container">
-          <div class="modal">
-            <h1>Modal</h1>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident
-              laudantium incidunt nesciunt amet quibusdam. Quam suscipit repellendus,
-              harum atque explicabo vel perspiciatis ex ab quae? Placeat iusto totam
-              illum dicta.
-            </p>
-            <button id="close">Close-me</button>
-          </div>
-        </div>
-
+        <script type="text/javascript" src="./assets/js/data.js" defer></script>
+        <script type="text/javascript" src="./assets/js/quiz.js" defer></script>
+        <script
+          type="text/javascript"
+          src="./assets/js/audio.js"
+          defer
+        ></script>
+        <script
+          type="text/javascript"
+          src="./assets/js/modal.js"
+          defer
+        ></script>
       </div>
     </div>
   </body>

@@ -8,17 +8,36 @@
     <link rel="stylesheet" href="./assets/css/modal.css" />
   </head>
   <body>
-    <button id="open">Modal</button>
-    <div class="modal-container" id="modal_container">
+    
+    <!-- button open -->
+    <!-- <div style="display: flex; justify-content:center; align-items:center">
+      <button style="margin-top:8rem; padding: 10px 20px; border-radius: 5px;" id="open">Modal</button>
+    </div> -->
+
+    <!-- Modal incorrect -->
+    <div class="modal-container" id="modal_container_i">
       <div class="modal">
         <h2>Incorrect</h2>
         <p>
           Incorrect answer
         </p>
-        <img src="./assets/img/IconsColor17.png" alt="incorrect icon" srcset="">
+        <img src="./assets/img/iconIncorrect.png" alt="incorrect icon" srcset="">
         <!-- <button id="close">Close-me</button> -->
       </div>
     </div>
+
+    <!-- Modal correct -->
+    <div class="modal-container" id="modal_container_c">
+      <div class="modal">
+        <h2>Correct</h2>
+        <p>
+          Correct answer
+        </p>
+        <img src="./assets/img/iconCorrect.png" alt="incorrect icon" srcset="">
+        <!-- <button id="close">Close-me</button> -->
+      </div>
+    </div>
+
   </body>
   <script src="./assets/js/modal.js"></script>
 </html>
