@@ -61,6 +61,21 @@ function deselectAnswers() {
   });
 }
 
+function resetAswers(selector) {
+  document
+    .querySelectorAll("#quiz img")
+    .forEach((img) => img.classList.add("hidden"));
+}
+
+function restart(){
+  container.style.display = "block";
+  container.classList.add("end-animation");
+  setTimeout(() => {
+  window.location.reload();  
+  }, 600);
+}
+
+
 submitBtn.addEventListener("click", () => {
   // check to see the answer
   const answer = getSelected();
@@ -78,24 +93,23 @@ submitBtn.addEventListener("click", () => {
     } else if (answer !== quizData[currentQuiz].correct) {
       modal_container_i.classList.add("show");
     }
-
     currentQuiz++;
-    if (currentQuiz < quizData.length) {
-      loadQuiz(500);            
+    if(currentQuiz < quizData.length) {      
     } else {
-      quiz.innerHTML = `<h2>You answered correctly at ${score}/${quizData.length} questions.</h2> <button onclick="location.reload()">Try again?</button>`;
-      // quiz.innerHTML = `<h2>Você respondeu corretamente ${score}/${quizData.length} questões.</h2> <button onclick="location.reload()">Tentar denovo?</button>`;
-    }
+      quiz.innerHTML = `<h2>You answered correctly at ${score}/${quizData.length} questions.</h2> <button type="submit" onclick="restart()">Try again?</button>`;
+    }    
   }
 });
 
 close_c.addEventListener("click", () => {
-  modal_container_c.classList.remove("show"); 
+  modal_container_c.classList.remove("show");
+  loadQuiz(500); 
   loadScreen();
 });
 
 close_i.addEventListener("click", () => {
   modal_container_i.classList.remove("show"); 
+  loadQuiz(500);
   loadScreen();
 });
 
@@ -107,9 +121,3 @@ answerEls.forEach((el) => {
     img.classList.remove("hidden");
   });
 });
-
-function resetAswers(selector) {
-  document
-    .querySelectorAll("#quiz img")
-    .forEach((img) => img.classList.add("hidden"));
-}
