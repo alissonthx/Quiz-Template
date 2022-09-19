@@ -8,6 +8,16 @@ body {
   font-family: 'Silkscreen', cursive;
   min-height: 100vh;
 }
+p {
+  opacity: 0.7;
+  font-size: 1.3rem;
+  font-weight: 200;
+}
+
+img {
+  width: 3rem;
+  height: 3rem;
+}
 
 h1 {
   padding-left: 20px;
@@ -15,21 +25,8 @@ h1 {
 }
 
 label {
-  font-size: 1.3rem;
-  font-weight: 200;
-}
-
-a {
-  display: block;
-  bottom: 2.5rem;
-  left: 2.5rem;
-  position: absolute;
-  background-color: #fb5f70;
-  border-radius: 5px;
-  padding: 20px;
-  width: 28px;
-  height: 28px;
-  cursor: pointer;
+  font-size: 1.2rem;
+  font-weight: 400;
 }
 
 ul {
@@ -55,7 +52,7 @@ button {
   display: block;
   padding: 1.1rem;
   font-family: inherit;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   width: 100%;
   cursor: pointer;
 }
@@ -146,18 +143,40 @@ span {
 
 .player {
   display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.player-button {
+  display: flex;
+  bottom: 2.5rem;
+  left: 2.5rem;
+  position: absolute;
+  background-color: #fb5f70;
+  border-radius: 5px;
+  padding: 20px;
+  width: 28px;
+  height: 28px;
+  cursor: pointer;
 }
 
 .coin {
-  height: 3.5rem;
+  height: 3.2rem;
   display: flex;
-  -webkit-box-align: center;
   align-items: center;
-  padding: 0px 15px;
+  padding: 0px 10px;
   border-radius: 6px;
   background-color: #fb5f70;
   color: white;
   font-size: 1.5rem;
+}
+
+.player-img {
+  width: 4rem;
+  height: 4rem;
+  display: block;
+  position: absolute;
+  margin: -16px 0px 0px -16px;   
 }
 
 .coin-img {
@@ -194,6 +213,63 @@ h2 {
   z-index: 1;
   width: 100vw;
   height: 100vh;
+}
+
+/* Modal */
+.modal-container {
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  pointer-events: none;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+.modal {
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  padding: 30px 50px;
+  width: 350px;
+  height: 228px;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-title {
+  font-size: 2.2rem;
+  font-weight: 300;
+}
+
+.modal-button {
+  background-color: #000;
+  /* background-color: #9b59b6; */
+  color: white;
+  border: none;
+  display: block;
+  padding: 1.1rem;
+  font-family: inherit;
+  font-size: 1.3rem;
+  width: 70px;
+  cursor: pointer;
+}
+
+.modal-button:hover {
+  background-color: #9347b1;
+}
+
+.show {
+  pointer-events: auto;
+  opacity: 1;
 }
 
 @media screen and (max-width: 1000px) {

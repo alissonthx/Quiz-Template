@@ -7,18 +7,14 @@ p {
 }
 
 img {
-    padding: 10px;
+    width: 3rem;
+    height: 3rem;    
 }
 
 body {
     margin: 0 auto;
     font-family: 'Silkscreen', cursive;
     min-height: 100vh;
-}
-
-.modal-title {
-    font-size: 2.2rem;
-    font-weight: 300;
 }
 
 .modal-container {
@@ -41,9 +37,35 @@ body {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     padding: 30px 50px;
     width: 350px;
-    height: 200px;
+    height: 228px;
     max-width: 100%;
+    display: flex;
+    flex-direction: column;
     text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-title {
+    font-size: 2.2rem;
+    font-weight: 300;
+}
+
+.modal-button {
+    background-color: #000;
+    /* background-color: #9b59b6; */
+    color: white;
+    border: none;    
+    display: block;
+    padding: 1.1rem;
+    font-family: inherit;
+    font-size: 1.3rem;
+    width: 70px;
+    cursor: pointer;
+}
+
+.modal-button:hover {
+    background-color: #9347b1;
 }
 
 .show {

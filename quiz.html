@@ -3,8 +3,7 @@
   <head>
     <title>Quiz Template</title>
     <meta charset="utf-8" />
-    <link rel="stylesheet" href="./assets/css/quiz.css" />
-    <link rel="stylesheet" href="./assets/css/modal.css" />
+    <link rel="stylesheet" href="./assets/css/quiz.css" />    
   </head>
   <body>
     <div id="container"></div>
@@ -90,11 +89,12 @@
         <h2 class="modal-title">Incorrect</h2>
         <p>Incorrect answer</p>
         <img
+          style="padding-bottom: 10px"
           src="./assets/img/iconIncorrect.png"
           alt="incorrect icon"
           srcset=""
         />
-        <button id="close_i">OK</button>
+        <button class="modal-button" id="close_i">OK</button>
       </div>
     </div>
 
@@ -104,65 +104,51 @@
         <h2 class="modal-title">Correct</h2>
         <p>Correct answer</p>
         <img
+          style="padding-bottom: 10px"
           src="./assets/img/iconCorrect.png"
           alt="incorrect icon"
           srcset=""
         />
-        <button id="close_c">OK</button>
+        <button class="modal-button" id="close_c">OK</button>
       </div>
     </div>
 
-    <!-- Play Button -->
-    <div class="ui-footer">
-      <div class="player">
-        <!-- Play button -->
-        <a id="play" onclick="playShow()">
-          <svg
-            style="width: 2rem; height: 2rem; display: block; margin: 0 auto"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 384 512"
-          >
-            <path
-              d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80V432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z"
-            />
-          </svg>
-        </a>
-
-        <!-- Pause Button -->
-        <a id="pause" onclick="pauseShow()" style="display: none">
-          <svg
-            style="width: 2rem; height: 2rem; display: block; margin: 0 auto"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 320 512"
-          >
-            <path
-              d="M48 64C21.5 64 0 85.5 0 112V400c0 26.5 21.5 48 48 48H80c26.5 0 48-21.5 48-48V112c0-26.5-21.5-48-48-48H48zm192 0c-26.5 0-48 21.5-48 48V400c0 26.5 21.5 48 48 48h32c26.5 0 48-21.5 48-48V112c0-26.5-21.5-48-48-48H240z"
-            />
-          </svg>
-        </a>
-
-        <!-- Audio player -->
-        <audio id="audio" loop>
-          <source src="./assets/sounds/audio.mp3" type="audio/mp3" />
-        </audio>
+    <!-- Player Buttons -->
+    <div class="player">
+      <!-- Play button -->
+      <div class="player-button" id="play" onclick="playShow()">
+        <img
+          class="player-img"
+          src="./assets/img/play.png"
+          alt="play image"
+          srcset=""
+        />
       </div>
 
-      <!-- Icon question -->
-      <div class="icon">
-        <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-        <lottie-player
-          src="https://assets5.lottiefiles.com/private_files/lf30_ajbblxtg.json"
-          background="transparent"
-          speed="1"
-          style="width: 100px; height: 100px"
-          loop
-          autoplay
-        ></lottie-player>
+      <!-- Pause Button -->
+      <div
+        class="player-button"
+        id="pause"
+        onclick="pauseShow()"
+        style="display: none"
+      >
+        <img
+          class="player-img"
+          src="./assets/img/pause.png"
+          alt="pause image"
+          srcset=""
+        />
       </div>
-      <script type="text/javascript" src="./assets/js/data.js" defer></script>
-      <script type="text/javascript" src="./assets/js/quiz.js" defer></script>
-      <script type="text/javascript" src="./assets/js/audio.js" defer></script>
-      <script type="text/javascript" src="./assets/js/modal.js" defer></script>
+
+      <!-- Audio player -->
+      <audio id="audio" loop>
+        <source src="./assets/sounds/audio.mp3" type="audio/mp3" />
+      </audio>
     </div>
+
+    <script type="text/javascript" src="./assets/js/data.js" defer></script>
+    <script type="text/javascript" src="./assets/js/quiz.js" defer></script>
+    <script type="text/javascript" src="./assets/js/audio.js" defer></script>
+    <script type="text/javascript" src="./assets/js/modal.js" defer></script>
   </body>
 </html>
