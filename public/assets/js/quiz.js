@@ -8,6 +8,10 @@ const c_text = document.getElementById("c_text");
 const d_text = document.getElementById("d_text");
 const submitBtn = document.getElementById("submit");
 const sound = document.getElementById("coinSound");
+const modal_container_i = document.getElementById("modal_container_i");
+const modal_container_c = document.getElementById("modal_container_c");
+const close_c = document.getElementById("close_c");
+const close_i = document.getElementById("close_i");
 
 let currentQuiz = 0;
 let score = 0;
@@ -15,7 +19,7 @@ let coins = 0;
 
 loadQuiz();
 
-function loadScreen(){
+function loadScreen() {
   container.style.display = "block";
   container.classList.add("quiz-animation");
 
@@ -30,13 +34,13 @@ function loadQuiz(delayToChangeQuestion) {
   deselectAnswers();
   const currentQuizData = quizData[currentQuiz];
 
-  setTimeout(()=>{
+  setTimeout(() => {
     questionEl.innerText = currentQuizData.question;
     a_text.innerText = currentQuizData.a;
     b_text.innerText = currentQuizData.b;
     c_text.innerText = currentQuizData.c;
-    d_text.innerText = currentQuizData.d;  
-  },delayToChangeQuestion);
+    d_text.innerText = currentQuizData.d;
+  }, delayToChangeQuestion);
 }
 
 function getSelected() {
@@ -70,17 +74,29 @@ submitBtn.addEventListener("click", () => {
       coins += 10;
       document.getElementById("coinsResult").innerHTML = +coins;
       coinSound();
+      modal_container_c.classList.add("show");
+    } else if (answer !== quizData[currentQuiz].correct) {
+      modal_container_i.classList.add("show");
     }
 
     currentQuiz++;
     if (currentQuiz < quizData.length) {
-      loadQuiz(500);
-      loadScreen();
+      loadQuiz(500);            
     } else {
-      // quiz.innerHTML = `<h2>You answered correctly at ${score}/${quizData.length} questions.</h2> <button onclick="location.reload()">Try again?</button>`;
-      quiz.innerHTML = `<h2>Você respondeu corretamente ${score}/${quizData.length} questões.</h2> <button onclick="location.reload()">Tentar denovo?</button>`;
+      quiz.innerHTML = `<h2>You answered correctly at ${score}/${quizData.length} questions.</h2> <button onclick="location.reload()">Try again?</button>`;
+      // quiz.innerHTML = `<h2>Você respondeu corretamente ${score}/${quizData.length} questões.</h2> <button onclick="location.reload()">Tentar denovo?</button>`;
     }
   }
+});
+
+close_c.addEventListener("click", () => {
+  modal_container_c.classList.remove("show"); 
+  loadScreen();
+});
+
+close_i.addEventListener("click", () => {
+  modal_container_i.classList.remove("show"); 
+  loadScreen();
 });
 
 // Animation ==================================================

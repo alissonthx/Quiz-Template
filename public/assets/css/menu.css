@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Silkscreen&family=VT323&display=swap');
 
 :root {
   --clr: rgba(169, 20, 255, 0);
@@ -9,7 +10,7 @@ body {
   background-color: var(--clr-bg);
   background-image: linear-gradient(315deg, #7f53ac 0%, #647dee 74%);
   margin: 0 auto;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Silkscreen', cursive;
   min-height: 100vh;
 }
 
@@ -25,28 +26,31 @@ body {
 } */
 
 .c-loader {
-  animation: is-rotating-loading 1s infinite;
-  border: 6px solid #e5e5e5;
+  animation: is-rotating-loading 1.2s infinite;  
+  /* height: 10px;
+  width: 10px; */
+  /* transform-origin: center; */
+  /* border: 6px solid #e5e5e5;
   border-radius: 50%;
-  border-top-color: #51d4db;
-  height: 250px;
-  width: 250px;
+  border-top-color: #51d4db; */
+  /* height: 250px;
+  width: 250px; */
 }
 
-.loader-container{
+.loader-container {
   position: absolute;
   display: flex;
   justify-content: center;
-  align-items: center; 
-  min-height: 100vh; 
-  min-width: 100vw;  
+  align-items: center;
+  min-height: 100vh;
+  min-width: 100vw;
 }
 
 .hidden {
   display: none;
 }
 
-.container {  
+.container {
   min-height: 100vh;
   display: flex;
   justify-content: center;
@@ -58,21 +62,15 @@ h1 {
   text-shadow: 1px 1px 2px #120458;
   color: white;
   background-color: var(--clr);
-  font-size: 2rem;
+  font-size: 2.2rem;
   transition: all 0.2s ease;
   animation: screen infinite;
   animation-duration: 2s;
 }
 
-@keyframes is-rotating {
-  to {
-    transform: rotate(1turn);
-  }
-}
-
 @keyframes is-rotating-loading {
   to {
-    transform: rotate(1turn);
+    transform: rotate(360deg);
   }
 }
 
@@ -94,6 +92,6 @@ h1 {
   h1 {
     text-align: center;
     font-size: 1.5rem;
-    padding: 3rem;    
+    padding: 3rem;
   }
 }
