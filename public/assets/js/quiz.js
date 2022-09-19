@@ -96,7 +96,7 @@ submitBtn.addEventListener("click", () => {
     currentQuiz++;
     if(currentQuiz < quizData.length) {      
     } else {
-      quiz.innerHTML = `<h2>You answered correctly at ${score}/${quizData.length} questions.</h2> <button type="submit" onclick="restart()">Try again?</button>`;
+      quiz.innerHTML = `<h2>You answered correctly at ${score}/${quizData.length} questions.</h2> <button class="quiz-button" onclick="restart()">Try again?</button>`;
     }    
   }
 });
