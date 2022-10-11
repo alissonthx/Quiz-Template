@@ -216,7 +216,7 @@ h2 {
   height: 100vh;
 }
 
-/* Modal */
+/* Modal ======================================================*/
 .modal-container {
   background-color: rgba(0, 0, 0, 0.5);
   opacity: 0;
@@ -286,6 +286,7 @@ h2 {
   opacity: 1;
 }
 
+/* Media query ====================================================== */
 @media screen and (max-width: 1000px) {
 
   h2 {
@@ -363,8 +364,22 @@ h2 {
     margin: -1rem 0;
     right: 15%;
   }
+  .modal{
+    width: 700px;
+    height: 380px;
+  }
+  .modal-title {
+    font-size: 3.5rem;
+  }
+  .modal-text {
+    font-size: 2.5rem;
+  }
+  .modal-button {
+    font-size: 2.5rem;
+  } 
 }
 
+/* Animations ======================================================*/
 .quiz-animation {
   animation: quiz-animation 1.2s ease-in-out;
 }
